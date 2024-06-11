@@ -3,14 +3,17 @@ using namespace std;
 
 string arrayBuku[5];
 int maksimal = 5, top = 0;
+
 bool isFull()
 {
     return (top == maksimal);
 }
+
 bool isEmpty()
 {
     return (top == 0);
 }
+
 void pushArrayBuku(string data)
 {
     if (isFull())
@@ -23,6 +26,7 @@ void pushArrayBuku(string data)
         top++;
     }
 }
+
 void popArrayBuku()
 {
     if (isEmpty())
@@ -35,6 +39,7 @@ void popArrayBuku()
         top--;
     }
 }
+
 void peekArrayBuku(int posisi)
 {
     if (isEmpty())
@@ -51,10 +56,12 @@ void peekArrayBuku(int posisi)
         cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;
     }
 }
+
 int countStack()
 {
     return top;
 }
+
 void changeArrayBuku(int posisi, string data)
 {
     if (posisi > top)
@@ -71,6 +78,7 @@ void changeArrayBuku(int posisi, string data)
         arrayBuku[index] = data;
     }
 }
+
 void destroyArraybuku()
 {
     for (int i = top; i >= 0; i--)
@@ -79,6 +87,7 @@ void destroyArraybuku()
     }
     top = 0;
 }
+
 void cetakArrayBuku()
 {
     if (isEmpty())
@@ -93,6 +102,7 @@ void cetakArrayBuku()
         }
     }
 }
+
 int main()
 {
     pushArrayBuku("Kalkulus");
@@ -104,7 +114,7 @@ int main()
     cout << "\n";
     cout << "Apakah data stack penuh? " << isFull() << endl;
     cout << "Apakah data stack kosong? " << isEmpty() << endl;
-    peekArrayBuku(2);
+    peekArrayBuku(5);
     popArrayBuku();
     cout << "Banyaknya data = " << countStack() << endl;
     changeArrayBuku(2, "Bahasa Jerman");

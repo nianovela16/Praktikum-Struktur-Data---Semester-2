@@ -18,7 +18,8 @@ bool isEmpty() {
     return head == NULL;
 }
 
-void insertDepan(int nilai) {
+void insertDepan(int nilai)
+{
     Node *baru = new Node;
     baru->data = nilai;
     baru->next = NULL;
@@ -30,7 +31,8 @@ void insertDepan(int nilai) {
     }
 }
 
-void insertBelakang(int nilai) {
+void insertBelakang(int nilai)
+{
     Node *baru = new Node;
     baru->data = nilai;
     baru->next = NULL;
@@ -52,7 +54,8 @@ int hitungList() {
     return jumlah;
 }
 
-void insertTengah(int data, int posisi) {
+void insertTengah(int data, int posisi) 
+{
     if (posisi < 1 || posisi > hitungList()) {
         cout << "Posisi diluar jangkauan" << endl;
     } else if (posisi == 1) {
